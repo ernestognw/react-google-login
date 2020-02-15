@@ -41,6 +41,10 @@ const useGoogleLogin = ({
       givenName: basicProfile.getGivenName(),
       familyName: basicProfile.getFamilyName()
     }
+    /*
+      Add Zi object manually to support people who relies on older docs
+    */
+    res.Zi = res.authResponse
     onSuccess(res)
   }
 
